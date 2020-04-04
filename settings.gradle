@@ -1,0 +1,4 @@
+rootProject.name = 'mailsender'
+include 'contract'
+include 'contract'
+
