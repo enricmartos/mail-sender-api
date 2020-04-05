@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface MailSenderService {
 
     @PostMapping("/email")
-    void sendEmail(@RequestHeader("apiKey") String apiKey, @RequestParam("from") String from,
-                   @RequestParam("to") String to, @RequestParam("body") String body)
+    void sendEmail(@RequestHeader("apiKey") String apiKey,
+                   @RequestParam("to") String to, @RequestParam("subject") String subject, @RequestParam("body") String body)
             throws BadRequestException, MailNotSendException;
 
 }
